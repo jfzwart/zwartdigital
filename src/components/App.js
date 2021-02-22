@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 class App extends React.Component {
     render() {
         return (
-            <div className="app">
+            <div className="App">
                 <Router history={history}>
                 <div>
                     <Navbar />
