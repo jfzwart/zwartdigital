@@ -1,7 +1,10 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import history from '../history'
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 class App extends React.Component {
     render() {
@@ -16,11 +19,14 @@ class App extends React.Component {
                         <Route path='/sessions' exact component={Resume}/>
                         <Route path='/contact' exact component={Contact} /> */}
                     </Switch>
+                    <Footer />
                 </div>
                 </Router>
             </div>
         );
     }
 }
+
+library.add(fab)
 
 export default App;
