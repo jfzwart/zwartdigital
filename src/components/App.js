@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import '../stylesheets/app.scss';
 import history from '../history'
 import Navbar from './Navbar';
 import Footer from './Footer';
