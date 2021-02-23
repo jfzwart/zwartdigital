@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as CloseMenu } from "../assets/x.svg";
 import { ReactComponent as MenuIcon } from "../assets/menu.svg";
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import buttons from '../stylesheets/buttons.scss'
-import navbar from '../stylesheets/navbar.scss'
+import '../stylesheets/buttons.scss'
+import '../stylesheets/navbar.scss'
 
 
 const Header = () => {
@@ -26,12 +25,12 @@ const Header = () => {
                                 HOME
                             </Link>
                         </li>
-                        <li class="option" onClick={closeMobileMenu}>
+                        <li className="option" onClick={closeMobileMenu}>
                             <Link to="/portfolio">
                                 PORTFOLIO
                             </Link>
                         </li>
-                        <li class="option" onClick={closeMobileMenu}>    
+                        <li className="option" onClick={closeMobileMenu}>    
                             <Link to="/contact">
                                 CONTACT
                             </Link>
