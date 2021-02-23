@@ -1,0 +1,125 @@
+h1 {
+    display: table;
+    margin: 40px auto;
+    color: #fff;
+    font: 30px Helvetica;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+  
+form {
+    display: table;
+    margin: 40px auto;
+}
+
+input {
+  font-family: 'Nanum Gothic Coding', monospace;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  padding: 20px;
+  width: 530px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-text {
+  font-family: 'Nanum Gothic Coding', monospace;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  padding: 15px;
+  width: 530px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-top: -22px;
+}
+
+input::placeholder {
+  font-family: 'Nanum Gothic Coding', monospace;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+
+input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+input:focus {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+textarea {
+  font-family: 'Nanum Gothic Coding', monospace;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  padding: 20px;
+  width: 530px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  height: 200px;
+}
+
+textarea::placeholder {
+  font-family: 'Nanum Gothic Coding', monospace;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+
+textarea.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+textarea:focus {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+/* textarea::placeholder {
+  color: orange;
+} */
+
+.buttonForm {
+  font-family: 'Nanum Gothic Coding', monospace;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: rgb(230,68,30);;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+}
+
+.buttonForm:hover {
+  background: rgb(230,68,30);
+  cursor: pointer;
+}
+
+.contact-form {
+  height: 100vh;
+}
+  
+@media screen and (max-width: 648px) {
+  .contact-text {
+    width: 380px;
+  }
+
+  textarea {
+    width: 380px;
+  }
+
+  input {
+    width: 380px;
+  }
+}
