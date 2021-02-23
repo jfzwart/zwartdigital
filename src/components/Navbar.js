@@ -31,11 +31,6 @@ const Header = () => {
                                 PORTFOLIO
                             </Link>
                         </li>
-                        <li class="option" onClick={closeMobileMenu}>
-                            <Link to="/resume">
-                                RESUME
-                            </Link>
-                        </li>
                         <li class="option" onClick={closeMobileMenu}>    
                             <Link to="/contact">
                                 CONTACT
