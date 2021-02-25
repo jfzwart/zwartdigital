@@ -8,6 +8,7 @@ import Home from './Home';
 import Contact from './Contact';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Portfolio from './Portfolio';
 
 class App extends React.Component {
     render() {
@@ -19,9 +20,7 @@ class App extends React.Component {
                     <Switch>
                         <Route path='/' exact component={Home}/>
                         <Route path='/contact' exact component={Contact} />
-                        {/* <Route path='/art' exact component={Portfolio}/>
-                        <Route path='/sessions' exact component={Resume}/>
-                         /> */}
+                        <Route path='/portfolio' exact component={Portfolio} />
                     </Switch>
                     <Footer />
                 </div>
