@@ -1,5 +1,6 @@
 import React from 'react';
 import Item1 from '../assets/website.jpg'
+import '../stylesheets/portfolio.scss';
 
 const items = [
         {id:1,title:'Streams', desc: "Twitch Like Streaming Platform", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/Streams", link: "", img: Item1},
@@ -15,14 +16,29 @@ const items = [
 
 const itemList = items.map(item => {
     return (
-       console.log(item)
+       <div className="card">
+           <div className="card-image">
+            <img src={item.img} alt={item.title} />
+            <button className="btn btn-success">
+                Code
+            </button>
+           </div>
+           <div className="card-content">
+                <h2 className="card-title">{item.title}</h2>
+                <p>{item.desc}</p>
+            </div>
+       </div>
     )
 })
 
 
 const Portfolio = () => {
     return (
-        <h1>Portfolio</h1>
+        <div className="container">
+        <div className="box">
+            {itemList}
+        </div>
+    </div>
     )
 };
 
