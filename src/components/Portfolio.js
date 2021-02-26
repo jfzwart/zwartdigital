@@ -16,7 +16,7 @@ const items = [
 
 const itemList = items.map(item => {
     return (
-       <div className="card">
+       <div className="card" key={item.id}>
            <div className="card-image">
             <img src={item.img} alt={item.title} />
             <button className="btn btn-success">
