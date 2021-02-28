@@ -1,6 +1,5 @@
 import React from 'react';
 import Item1 from '../assets/website.jpg';
-import { Link } from 'react-router-dom';
 import '../stylesheets/portfolio.scss';
 
 const items = [
