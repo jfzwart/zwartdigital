@@ -1,5 +1,6 @@
 import React from 'react';
-import Item1 from '../assets/website.jpg'
+import Item1 from '../assets/website.jpg';
+import { Link } from 'react-router-dom';
 import '../stylesheets/portfolio.scss';
 
 const items = [
@@ -19,9 +20,11 @@ const itemList = items.map(item => {
        <div className="card" key={item.id}>
            <div className="card-image">
             <img src={item.img} alt={item.title} />
-            <button className="btn btn-success">
-                Code
-            </button>
+            <a href={item.code}>
+                <button className="btn btn-success">
+                    Code
+                </button> 
+            </a>
            </div>
            <div className="card-content">
                 <h2 className="card-title">{item.title}</h2>
