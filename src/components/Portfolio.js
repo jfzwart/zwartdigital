@@ -21,7 +21,7 @@ const itemList = items.map(item => {
             <img src={item.img} alt={item.title} />
             <a href={item.code}>
                 <button className="btn btn-success">
-                    Code
+                    code
                 </button> 
             </a>
            </div>
