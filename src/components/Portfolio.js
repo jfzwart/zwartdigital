@@ -6,6 +6,8 @@ import Item5 from '../assets/shopping.png';
 import Item6 from '../assets/youtube.png';
 import Item7 from '../assets/wehicle.png';
 import '../stylesheets/portfolio.scss';
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const items = [
         // {id:1,title:'Streams', desc: "Twitch Like Streaming Platform", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/Streams", link: "", img: Item1},
@@ -26,7 +28,7 @@ const itemList = items.map(item => {
             <img src={item.img} alt={item.title} />
             <a href={item.code}>
                 <button className="btn btn-success">
-                    code
+                <FontAwesomeIcon icon={faCode} />
                 </button> 
             </a>
            </div>
