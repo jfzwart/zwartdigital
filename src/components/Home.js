@@ -4,7 +4,7 @@ import '../stylesheets/home.scss';
 const Home = () => {
     return (
         <div className="container d-flex">
-            <img className="home-logo" src="/logotext.png" alt="logo" ></img>
+            <img className="home-logo" src="logotext.png" alt="logo" ></img>
             <div className="home-text">
                 <p>Hello, I'm</p>
                 <h1>Jeroen Zwart</h1>
