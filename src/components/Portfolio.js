@@ -20,8 +20,7 @@ import Collapse from '@material-ui/core/Collapse';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import Link from '@material-ui/core/Link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HttpIcon from '@material-ui/icons/Http';
@@ -76,7 +75,7 @@ const Portfolio = () => {
     const itemList = items.map(item => {
 
         return (
-            <Grid item xs={12} sm={6} m={3}> 
+            <Grid item xs={12} sm={6} md={4} key={item.title}> 
                 <Card className={classes.card}>
                 <CardHeader title={item.title} />
                 <CardMedia
@@ -85,12 +84,16 @@ const Portfolio = () => {
                     title={item.title}
                 />
                 <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                    <GitHubIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                    <HttpIcon />
-                    </IconButton>
+                    <Link href={item.code}>
+                        <IconButton aria-label="add to favorites">
+                            <GitHubIcon />
+                        </IconButton>
+                    </Link>
+                    <Link href={item.link} >
+                        <IconButton aria-label="share">
+                            <HttpIcon />
+                        </IconButton>
+                    </Link>
                     <IconButton
                     className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded
@@ -116,7 +119,7 @@ const Portfolio = () => {
 
     return (
         <React.Fragment> 
-            <Container maxWidth="m">
+            <Container maxWidth="lg">
                 <Grid container className={classes.root} spacing={6} >
                         {itemList}
                 </Grid>
