@@ -23,6 +23,8 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import HttpIcon from '@material-ui/icons/Http';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -80,19 +82,14 @@ const Portfolio = () => {
                 <CardMedia
                     className={classes.media}
                     image={item.img}
-                    title="Paella dish"
+                    title={item.title}
                 />
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    {item.desc}
-                    </Typography>
-                </CardContent>
                 <CardActions disableSpacing>
                     <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
+                    <GitHubIcon />
                     </IconButton>
                     <IconButton aria-label="share">
-                    <ShareIcon />
+                    <HttpIcon />
                     </IconButton>
                     <IconButton
                     className={clsx(classes.expand, {
@@ -107,10 +104,8 @@ const Portfolio = () => {
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                    <Typography paragraph>Method:</Typography>
                     <Typography paragraph>
-                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-                        set aside for 10 minutes.
+                        {item.desc}
                     </Typography>
                     </CardContent>
                 </Collapse>
