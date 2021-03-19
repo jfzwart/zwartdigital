@@ -33,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         minWidth: 225,
+        backgroundColor: '#EEEEEE',
+        // backgroundColor: #d6c3c9,
     },
     media: {
         height: 0,
