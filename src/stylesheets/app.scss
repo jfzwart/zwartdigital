@@ -1,9 +1,11 @@
 .App {
-    height: 100vh;
+    height: 120vh;
+    // background-color: lightblue;
     background-image: url('../assets/background.jpg');
-    background-size: cover;
+    opacity: 10;
+    // background-size: cover;
 }
 
-.App img {
-    height: 100%;
-}
+// .App img {
+//     height: 100%;
+// }

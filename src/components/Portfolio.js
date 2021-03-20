@@ -24,6 +24,7 @@ import Link from '@material-ui/core/Link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HttpIcon from '@material-ui/icons/Http';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,21 +51,23 @@ const useStyles = makeStyles((theme) => ({
     expandOpen: {
         transform: "rotate(180deg)"
     },
+    button: {
+        margin: 3,
+    }
 
 }));
-
 
 const items = [
         // {id:1,title:'Streams', desc: "Twitch Like Streaming Platform", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/Streams", link: "", img: Item1},
         {id:1,title:'SocialApe', desc: "Twitter like social media platform", lang: ["React", "Node.js", "Express.js", "Firebase", "Material-UI"], code: "https://github.com/jfzwart/socialape-client", link: "https://socialape-cfaf3.web.app/", img: Item1},
-        {id:2,title:'Watchbuddy', desc: "Social Stream Recommendation Service", lang: ["Ruby", "JS", "HTML", "SCSS"], code: "https://github.com/Gerro385/watchbuddy", link: "http://www.watchbuddy.club/", img: Item3},
-        {id:3,title:'Youtube API', desc: "React Hooks Video Tool", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/videos", link: "https://admiring-knuth-c9f417.netlify.app/", img: Item6},
+        {id:2,title:'Watchbuddy', desc: "Social streaming recommendation platform", lang: ["Ruby", "Javascript"], code: "https://github.com/Gerro385/watchbuddy", link: "http://www.watchbuddy.club/", img: Item3},
+        {id:3,title:'Youtube API', desc: "React Hooks Video Tool", lang: ["React", "Javascript"], code: "https://github.com/jfzwart/videos", link: "https://admiring-knuth-c9f417.netlify.app/", img: Item6},
         // {id:4,title:'IenaBerlin', desc: "Berlin Fashion Brand Portfolio", lang: ["React", "JS", "Firebase", "HTML", "SCSS"], code: "https://github.com/jfzwart/ienaberlin", link: "https://www.ienaberlin.com", img: Item2},
         // {id:5,title:'Rails Mr. Cocktail', desc: "Cocktail Platform", lang: ["Ruby", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/cocktail-app-new", link: "https://cocktailmaniaonrails.herokuapp.com/	", img: Item1},
-        {id:6,title:'React Shopping Cart', desc: "Shopping Cart", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/react-shopping-cart", link: "https://keen-kalam-d97dac.netlify.app/", img: Item5},
-        {id:7,title:'Widgets', desc: "Widgets", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/widgets", link: "https://frosty-volhard-6cac95.netlify.app/", img: Item4},
+        {id:6,title:'React Shopping Cart', desc: "Shopping Cart", lang: ["React", "Redux", "Javascript"], code: "https://github.com/jfzwart/react-shopping-cart", link: "https://keen-kalam-d97dac.netlify.app/", img: Item5},
+        {id:7,title:'Widgets', desc: "Selection of widgets", lang: ["React", "Javascript"], code: "https://github.com/jfzwart/widgets", link: "https://frosty-volhard-6cac95.netlify.app/", img: Item4},
         // {id:8,title:'Zwart Portfolio', desc: "Portfolio Website", lang: ["React", "JS", "HTML", "SCSS"], code: "https://github.com/jfzwart/zwartportfolio", link: "https://www.jeroenzwart.com/", img: Item1},
-        {id:9,title:'AirBnB Clone', desc: "Airbnb Like Website Offering Fancy Vehicles", lang: ["Ruby", "JS", "HTML", "SCSS"], code: "https://github.com/kasia-gwc/AirBnB_for_Cars", link: "https://wehicle.herokuapp.com/", img: Item7},
+        {id:9,title:'AirBnB Clone', desc: "Airbnb Like Website Offering Fancy Vehicles", lang: ["Ruby", "Javascript"], code: "https://github.com/kasia-gwc/AirBnB_for_Cars", link: "https://wehicle.herokuapp.com/", img: Item7},
 ];
 
 const Portfolio = () => {
@@ -77,7 +80,7 @@ const Portfolio = () => {
     const itemList = items.map(item => {
 
         return (
-            <Grid item xs={12} sm={6} md={4} key={item.title}> 
+            <Grid item xs={12} sm={6} md={6} lg={6} key={item.title}> 
                 <Card className={classes.card}>
                 <CardHeader title={item.title} />
                 <CardMedia
@@ -87,12 +90,12 @@ const Portfolio = () => {
                 />
                 <CardActions disableSpacing>
                     <Link href={item.code}>
-                        <IconButton aria-label="add to favorites">
+                        <IconButton aria-label="Look at the code">
                             <GitHubIcon />
                         </IconButton>
                     </Link>
                     <Link href={item.link} >
-                        <IconButton aria-label="share">
+                        <IconButton aria-label="Visit the website">
                             <HttpIcon />
                         </IconButton>
                     </Link>
@@ -112,6 +115,13 @@ const Portfolio = () => {
                     <Typography paragraph>
                         {item.desc}
                     </Typography>
+                    { 
+                        item.lang.map(lan => {
+                            return (
+                                <Button className={classes.button} variant="contained" key={lan}>{lan}</Button>
+                            )
+                        }) 
+                    } 
                     </CardContent>
                 </Collapse>
                 </Card>

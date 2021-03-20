@@ -13,9 +13,9 @@ import Portfolio from './Portfolio';
 class App extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div>
                 <Router history={history}>
-                <div>
+                <div className="App">
                     <Navbar />
                     <Switch>
                         <Route path='/' exact component={Home}/>
