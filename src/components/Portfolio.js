@@ -80,7 +80,7 @@ const Portfolio = () => {
     const itemList = items.map(item => {
 
         return (
-            <Grid item xs={12} sm={6} md={6} lg={6} key={item.title}> 
+            <Grid item xs={12} sm={6} md={6} lg={4} key={item.title}>
                 <Card className={classes.card}>
                 <CardHeader title={item.title} />
                 <CardMedia
@@ -115,13 +115,13 @@ const Portfolio = () => {
                     <Typography paragraph>
                         {item.desc}
                     </Typography>
-                    { 
+                    {
                         item.lang.map(lan => {
                             return (
                                 <Button className={classes.button} variant="contained" key={lan}>{lan}</Button>
                             )
-                        }) 
-                    } 
+                        })
+                    }
                     </CardContent>
                 </Collapse>
                 </Card>
@@ -130,7 +130,7 @@ const Portfolio = () => {
     })
 
     return (
-        <React.Fragment> 
+        <React.Fragment>
             <Container maxWidth="lg">
                 <Grid container className={classes.root} spacing={6} >
                         {itemList}
